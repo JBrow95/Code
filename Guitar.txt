@@ -1,0 +1,47 @@
+#Steps in playing Guitar
+
+#First Step
+
+def holdFrets
+  play_chord [72,63,68]
+end
+
+def holdFrets2
+  play :E3
+  sleep 0.5
+end
+
+def holdFrets3
+  play :D3
+end
+
+#Second step
+
+def strum
+  sample :guit_e_fifths, rate: 1
+end
+
+#Third Step
+
+def rockOut
+  sample :drum_heavy_kick, rate: 1
+  sleep 0.5
+end
+
+  4.times do
+    holdFrets
+    strum
+    rockOut
+  end
+  
+  2.times do
+    holdFrets2
+    holdFrets3
+    strum
+    rockOut
+  end
+
+
+
+
+
