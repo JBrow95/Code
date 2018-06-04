@@ -1,0 +1,20 @@
+def wear(smell)
+  sample :drum_tom_lo_hard, rate:(smell)
+end
+
+def wash(temp)  
+  play temp, amp: 0.1
+end
+
+def dry
+  use_synth :cnoise
+  play 70, amp: 0.1
+  sleep 0.5
+end
+
+
+5.times do
+  wear(1)
+  wash(60)
+  dry
+end
