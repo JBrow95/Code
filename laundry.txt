@@ -25,16 +25,16 @@ def treat_stains
   sleep 2
 end
 
-in_thread do
-  2.times do
+live_loop :laundry_1 do
+  loop do
     wear(1)
     treat_stains if dirty?
     wash(60)
-    dry(:elec_beep)
+    dry(:guit_harmonics)
   end
 end
 
-2.times do
+live_loop :laundry_2 do
   wear(5)
   treat_stains if dirty?
   wash(90)
