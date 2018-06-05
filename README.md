@@ -1,8 +1,10 @@
 Welcome to the Laundry Project
 
-Test this project out by downloading https://sonic-pi.net/.
+1. Download the laundry.txt file 
 
-Open Sonic-Pi, find the load button in the top-left side of the program and open laundry.txt.
+2. Test this project out by downloading https://sonic-pi.net/.
+
+3. Open Sonic-Pi, find the load button in the top-left side of the program and open laundry.txt.
 
 ================================================================================
 
