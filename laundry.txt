@@ -1,5 +1,10 @@
 def wear(smell)
-  sample :drum_tom_lo_hard, rate:(smell)
+  if smell >= 10
+    sample :drum_snare_hard
+  else
+    sample :drum_tom_lo_hard, rate: smell
+    wear(smell + 1)
+  end
 end
 
 def wash(temp)
@@ -17,17 +22,17 @@ end
 
 def treat_stains
   sample :bd_808
-  sleep 0.5
+  sleep 2
 end
 
-5.times do
+2.times do
   wear(1)
   treat_stains if dirty?
   wash(60)
   dry(:elec_beep)
 end
 
-5.times do
+2.times do
   wear(5)
   treat_stains if dirty?
   wash(90)
