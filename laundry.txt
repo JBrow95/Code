@@ -3,6 +3,7 @@ def wear(smell)
     sample :drum_snare_hard
   else
     sample :drum_tom_lo_hard, rate: smell
+    sleep 0.1
     wear(smell + 1)
   end
 end
@@ -14,6 +15,12 @@ end
 def dry(dryer)
   sample dryer
   sleep 0.5
+end
+
+def iron
+  use_synth :growl
+  play 60
+  sleep 1
 end
 
 def dirty?
@@ -31,6 +38,7 @@ live_loop :laundry_1 do
     treat_stains if dirty?
     wash(60)
     dry(:guit_harmonics)
+    iron
   end
 end
 
